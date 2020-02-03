@@ -8,6 +8,13 @@
                 "http://b.tile.openstreetmap.org/{z}/{x}/{y}.png"
             ],
             "tileSize": 256
+        },
+        "pirate-tiles": {
+            "type": "raster",
+            "tiles": [
+                "https://tiles.flarpyland.com/pirates/{z}/{x}/{y}.png"
+            ],
+            "tileSize": 256
         }
     },
     "layers": [
@@ -17,6 +24,13 @@
             "source": "simple-tiles",
             "minzoom": 0,
             "maxzoom": 22
+        },
+        {
+            "id": "pirates",
+            "type": "raster",
+            "source": "pirate-tiles",
+            "minzoom": 1,
+            "maxzoom": 18
         }
     ]
 }
